@@ -1,3 +1,10 @@
+import Navbar from '../components/layout/Navbar'
+
 export function Component() {
-  return <div>Home</div>
+  return (
+    <>
+      <Navbar />
+      <div className="min-h-screen bg-hero-bg" />
+    </>
+  )
 }
