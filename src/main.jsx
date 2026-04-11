@@ -22,6 +22,10 @@ const routes = [
         path: '/contact',
         lazy: () => import('./pages/Contact'),
       },
+      {
+        path: '*',
+        lazy: () => import('./pages/NotFound'),
+      },
     ],
   },
 ]
