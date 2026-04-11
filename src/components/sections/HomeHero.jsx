@@ -20,11 +20,13 @@ export default function HomeHero() {
       }
     }
 
-    video.addEventListener('canplaythrough', handleCanPlay)
+    // Start fade-in zodra eerste frame beschikbaar is
+    if (video.readyState >= 2) handleCanPlay()
+    video.addEventListener('canplay', handleCanPlay)
     video.addEventListener('timeupdate', handleTimeUpdate)
 
     return () => {
-      video.removeEventListener('canplaythrough', handleCanPlay)
+      video.removeEventListener('canplay', handleCanPlay)
       video.removeEventListener('timeupdate', handleTimeUpdate)
     }
   }, [])
@@ -40,6 +42,7 @@ export default function HomeHero() {
             muted
             loop
             playsInline
+            preload="auto"
             className={`w-full h-full object-cover transition-opacity duration-[2000ms] ${
               loaded ? 'opacity-100' : 'opacity-0'
             }`}
