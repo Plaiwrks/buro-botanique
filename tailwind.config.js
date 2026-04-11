@@ -1,0 +1,24 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'hero-bg': '#3C4A2A',
+        'section-pink': '#EDB8B8',
+        'section-green': '#9AAD65',
+        'ticker-bg': '#F7D5D5',
+        'text-dark': '#1E1208',
+      },
+      fontFamily: {
+        script: ['"Pinyon Script"', 'cursive'],
+        display: ['"Cormorant Garamond"', 'serif'],
+        body: ['"Jost"', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
