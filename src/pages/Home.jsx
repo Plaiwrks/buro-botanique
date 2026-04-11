@@ -1,15 +1,13 @@
-import Navbar from '../components/layout/Navbar'
-import Footer from '../components/layout/Footer'
 import HomeHero from '../components/sections/HomeHero'
 import HomeServices from '../components/sections/HomeServices'
+import HomePortfolio from '../components/sections/HomePortfolio'
 
 export function Component() {
   return (
     <>
-      <Navbar />
       <HomeHero />
       <HomeServices />
-      <Footer />
+      <HomePortfolio />
     </>
   )
 }
