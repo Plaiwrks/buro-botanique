@@ -68,7 +68,7 @@ export default function HomeHero() {
         </span>
 
         {/* Enormous heading — uitgestrekt over volledige breedte, mag buiten scherm vallen */}
-        <h1 className="font-display text-[22vw] md:text-[18vw] font-bold uppercase leading-[0.82] text-white tracking-[0.02em] text-center whitespace-nowrap">
+        <h1 className="font-display text-[16vw] md:text-[14vw] lg:text-[18vw] font-bold uppercase leading-[0.82] text-white tracking-[0.02em] text-center">
           Botanique
         </h1>
       </div>

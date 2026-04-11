@@ -28,7 +28,7 @@ export default function HomeServices() {
         </span>
 
         {/* Heading */}
-        <h2 className="font-display text-[10vw] md:text-[5vw] font-bold uppercase leading-[0.9] text-text-dark tracking-tight mb-16 md:mb-24">
+        <h2 className="font-display text-[9vw] md:text-[5vw] lg:text-[5vw] font-bold uppercase leading-[0.9] text-text-dark tracking-tight mb-16 md:mb-24">
           Tuinontwerp<br />
           met karakter
         </h2>

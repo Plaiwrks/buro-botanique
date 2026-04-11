@@ -14,7 +14,7 @@ export default function HomePortfolio() {
         <span className="font-script text-2xl md:text-4xl text-text-dark/50 block mb-[-0.2em]">
           Ons werk
         </span>
-        <h2 className="font-display text-[14vw] md:text-[10vw] font-bold uppercase leading-[0.85] text-text-dark tracking-tight whitespace-nowrap">
+        <h2 className="font-display text-[11vw] md:text-[8vw] lg:text-[10vw] font-bold uppercase leading-[0.85] text-text-dark tracking-tight">
           Ons Portfolio
         </h2>
       </div>

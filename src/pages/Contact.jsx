@@ -41,7 +41,7 @@ export function Component() {
           <span className="font-script text-2xl md:text-4xl text-white/50 block mb-[-0.2em]">
             Neem contact op
           </span>
-          <h1 className="font-display text-[12vw] md:text-[7vw] font-bold uppercase leading-[0.85] text-white tracking-tight mb-10 md:mb-14">
+          <h1 className="font-display text-[10vw] md:text-[6vw] lg:text-[7vw] font-bold uppercase leading-[0.85] text-white tracking-tight mb-10 md:mb-14">
             Laten we<br />kennismaken
           </h1>
           <p className="font-body text-base md:text-lg font-light text-white/80 max-w-xl leading-relaxed">
