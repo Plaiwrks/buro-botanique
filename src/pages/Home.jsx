@@ -2,6 +2,7 @@ import { Head } from 'vite-react-ssg'
 import HomeHero from '../components/sections/HomeHero'
 import HomeServices from '../components/sections/HomeServices'
 import HomePortfolio from '../components/sections/HomePortfolio'
+import HomeFaq from '../components/sections/HomeFaq'
 
 export function Component() {
   return (
@@ -21,6 +22,7 @@ export function Component() {
       <HomeHero />
       <HomeServices />
       <HomePortfolio />
+      <HomeFaq />
     </>
   )
 }

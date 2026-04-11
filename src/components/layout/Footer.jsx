@@ -64,16 +64,26 @@ export default function Footer() {
             </div>
 
             {/* Contact */}
-            <div>
-              <p className="font-body text-xs uppercase tracking-[0.2em] text-white/50 mb-3">
-                Contact
-              </p>
-              <a
-                href="mailto:claire.wesselings@gmail.com"
-                className="font-body text-sm text-white hover:text-white/70 transition-colors"
-              >
-                claire.wesselings@gmail.com
-              </a>
+            <div className="space-y-4">
+              <div>
+                <p className="font-body text-xs uppercase tracking-[0.2em] text-white/50 mb-1">
+                  Contact
+                </p>
+                <p className="font-body text-sm text-white/70">
+                  Claire Wesselings
+                </p>
+              </div>
+              <div>
+                <p className="font-body text-xs uppercase tracking-[0.2em] text-white/50 mb-1">
+                  E-mail
+                </p>
+                <a
+                  href="mailto:claire.wesselings@gmail.com"
+                  className="font-body text-sm text-white hover:text-white/70 transition-colors"
+                >
+                  claire.wesselings@gmail.com
+                </a>
+              </div>
             </div>
           </div>
 
