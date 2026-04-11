@@ -12,6 +12,7 @@ export default {
         'section-green': '#9AAD65',
         'ticker-bg': '#F7D5D5',
         'text-dark': '#1E1208',
+        'text-light': '#FFFFFF',
       },
       fontFamily: {
         script: ['"Pinyon Script"', 'cursive'],

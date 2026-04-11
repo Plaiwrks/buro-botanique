@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* Kleuren per sectie */
+  --color-hero-bg: #3C4A2A;
+  --color-section-pink: #EDB8B8;
+  --color-section-green: #9AAD65;
+  --color-ticker-bg: #F7D5D5;
+  --color-text: #1E1208;
+  --color-text-light: #FFFFFF;
+
+  /* Typografie */
+  --font-script: 'Pinyon Script', cursive;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Jost', sans-serif;
+}
