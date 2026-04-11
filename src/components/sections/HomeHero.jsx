@@ -1,12 +1,60 @@
+import { useRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function HomeHero() {
+  const videoRef = useRef(null)
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    function handleCanPlay() {
+      setLoaded(true)
+    }
+
+    // Naadloze loop: spring 0.3s voor het einde terug naar begin
+    function handleTimeUpdate() {
+      if (video.duration && video.currentTime >= video.duration - 0.3) {
+        video.currentTime = 0
+      }
+    }
+
+    video.addEventListener('canplaythrough', handleCanPlay)
+    video.addEventListener('timeupdate', handleTimeUpdate)
+
+    return () => {
+      video.removeEventListener('canplaythrough', handleCanPlay)
+      video.removeEventListener('timeupdate', handleTimeUpdate)
+    }
+  }, [])
+
   return (
     <section className="relative min-h-screen bg-hero-bg overflow-hidden flex flex-col">
-      {/* Hero image placeholder — achter de tekst */}
+      {/* Hero video — achter de tekst */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[60%] h-[70%] bg-white/5 rounded-sm" aria-hidden="true" />
-        {/* Vervang later met: <img src="/images/hero/home.webp" alt="..." className="w-full h-full object-cover" /> */}
+        <div className="w-[60%] h-[70%] overflow-hidden rounded-sm relative">
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`w-full h-full object-cover transition-opacity duration-[2000ms] ${
+              loaded ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <source src="/images/hero/hero-video.mp4" type="video/mp4" />
+          </video>
+
+          {/* Gradient overlay onderaan — transparant naar achtergrondkleur */}
+          <div
+            className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to bottom, transparent, #434F33)',
+            }}
+          />
+        </div>
       </div>
 
       {/* Centered title block */}
