@@ -14,6 +14,15 @@ export default {
         'text-dark': '#1E1208',
         'text-light': '#FFFFFF',
       },
+      animation: {
+        marquee: 'marquee 20s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
       fontFamily: {
         script: ['"Pinyon Script"', 'cursive'],
         display: ['"Cormorant Garamond"', 'serif'],

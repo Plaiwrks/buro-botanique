@@ -16,3 +16,14 @@
   --font-display: 'Cormorant Garamond', serif;
   --font-body: 'Jost', sans-serif;
 }
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
