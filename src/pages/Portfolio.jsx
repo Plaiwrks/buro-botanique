@@ -14,6 +14,11 @@ export function Component() {
           name="description"
           content="Bekijk onze tuinprojecten en laat je inspireren."
         />
+        <meta property="og:title" content="Portfolio — Buro Botanique" />
+        <meta property="og:description" content="Bekijk onze tuinprojecten en laat je inspireren." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.burobotanique.nl/portfolio" />
+        <meta property="og:locale" content="nl_NL" />
       </Head>
 
       {/* Hero */}

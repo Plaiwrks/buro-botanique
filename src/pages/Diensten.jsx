@@ -37,6 +37,11 @@ export function Component() {
           name="description"
           content="Kies het pakket dat bij jouw tuin past: Groen, Groener of Groenst."
         />
+        <meta property="og:title" content="Diensten — Buro Botanique" />
+        <meta property="og:description" content="Kies het pakket dat bij jouw tuin past: Groen, Groener of Groenst." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.burobotanique.nl/diensten" />
+        <meta property="og:locale" content="nl_NL" />
       </Head>
 
       {/* Hero */}

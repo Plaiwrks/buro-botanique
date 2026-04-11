@@ -12,6 +12,11 @@ export function Component() {
           name="description"
           content="Tuinontwerp, beplantingsplannen en lichtplannen voor een tuin die lééft."
         />
+        <meta property="og:title" content="Buro Botanique — Tuinontwerp op maat" />
+        <meta property="og:description" content="Tuinontwerp, beplantingsplannen en lichtplannen voor een tuin die lééft." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.burobotanique.nl/" />
+        <meta property="og:locale" content="nl_NL" />
       </Head>
       <HomeHero />
       <HomeServices />

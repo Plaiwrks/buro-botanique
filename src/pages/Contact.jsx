@@ -28,6 +28,11 @@ export function Component() {
           name="description"
           content="Neem contact op voor een vrijblijvend kennismakingsgesprek van 15 minuten."
         />
+        <meta property="og:title" content="Contact — Buro Botanique" />
+        <meta property="og:description" content="Neem contact op voor een vrijblijvend kennismakingsgesprek van 15 minuten." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.burobotanique.nl/contact" />
+        <meta property="og:locale" content="nl_NL" />
       </Head>
 
       {/* Hero */}
