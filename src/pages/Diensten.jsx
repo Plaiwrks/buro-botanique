@@ -73,7 +73,7 @@ export function Component() {
             {PACKAGES.map(({ name, subtitle, price, description, focus, idealFor }) => (
               <div
                 key={name}
-                className="border border-text-dark/10 p-8 md:p-10 grid"
+                className="border border-text-dark/10 p-6 md:p-10 grid"
                 style={{ display: 'grid', gridTemplateRows: 'subgrid', gridRow: 'span 5' }}
               >
                 {/* Package name + price */}

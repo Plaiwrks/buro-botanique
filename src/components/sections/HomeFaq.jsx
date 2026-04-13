@@ -78,7 +78,7 @@ export default function HomeFaq() {
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === i ? 'max-h-60 pb-4' : 'max-h-0'
+                  openIndex === i ? 'max-h-96 pb-4' : 'max-h-0'
                 }`}
               >
                 <p className="font-body text-sm md:text-base font-light text-text-dark/70 leading-relaxed">

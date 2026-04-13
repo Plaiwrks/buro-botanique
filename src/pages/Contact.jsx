@@ -54,7 +54,7 @@ export function Component() {
 
       {/* Contact content */}
       <section className="bg-section-pink px-6 md:px-10 py-20 md:py-32">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
           {/* Contact details */}
           <div>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-text-dark mb-8">

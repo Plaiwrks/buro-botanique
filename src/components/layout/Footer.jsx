@@ -13,8 +13,8 @@ export default function Footer() {
         <div className="max-w-5xl mx-auto">
           {/* Logo / naam */}
           <div className="mb-12">
-            <span className="font-script text-3xl text-white">Buro</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-white -mt-1 flex items-end">
+            <span className="font-script text-2xl md:text-3xl text-white">Buro</span>
+            <h2 className="font-display text-2xl md:text-5xl font-bold uppercase text-white -mt-1 flex items-end">
               <span>Botan</span>
               <img
                 src="/images/logo.png"
