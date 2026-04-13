@@ -51,15 +51,25 @@ export default function HomeHero() {
       </div>
 
       {/* Centered title block */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-24 md:pt-20">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-24 md:pt-20 px-4 md:px-8">
         {/* Script accent — gecentreerd boven BOTANIQUE */}
         <span className="font-script text-4xl md:text-6xl lg:text-7xl text-white block mb-[-0.2em]">
           Buro
         </span>
 
-        {/* Enormous heading — uitgestrekt over volledige breedte, mag buiten scherm vallen */}
-        <h1 className="font-display text-[16vw] md:text-[14vw] lg:text-[18vw] font-bold uppercase leading-[0.82] text-white tracking-[0.02em] text-center">
-          Botanique
+        {/* Enormous heading — logo vervangt de I */}
+        <h1
+          className="font-display font-bold uppercase leading-[0.82] text-white tracking-[0.02em] text-center w-full flex items-end justify-center"
+          style={{ fontSize: 'clamp(3rem, 15vw, 13rem)' }}
+        >
+          <span>Botan</span>
+          <img
+            src="/images/logo.png"
+            alt=""
+            className="inline-block"
+            style={{ height: '1.1em', width: 'auto', marginBottom: '-0.05em', marginLeft: '-0.08em', marginRight: '-0.08em' }}
+          />
+          <span>que</span>
         </h1>
       </div>
 
@@ -81,7 +91,7 @@ export default function HomeHero() {
           {/* CTA */}
           <Link
             to="/diensten"
-            className="inline-block font-body text-xs uppercase tracking-[0.2em] text-white border border-white/40 px-8 py-4 hover:bg-white hover:text-hero-bg transition-all duration-300"
+            className="inline-block font-body text-xs uppercase tracking-[0.2em] text-hero-bg bg-[#F5F0E8] px-10 py-4 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300"
           >
             Bekijk onze aanpak
           </Link>

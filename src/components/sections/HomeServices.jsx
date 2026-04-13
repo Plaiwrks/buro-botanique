@@ -36,8 +36,8 @@ export default function HomeServices() {
         {/* Services grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 mb-16 md:mb-20">
           {SERVICES.map(({ title, description }) => (
-            <div key={title}>
-              <h3 className="font-display text-xl md:text-2xl font-bold text-text-dark mb-3">
+            <div key={title} className="flex flex-col">
+              <h3 className="font-display text-xl md:text-2xl font-bold text-text-dark mb-3 md:min-h-[2lh]" style={{ minHeight: 'calc(2 * 1.5em)' }}>
                 {title}
               </h3>
               <p className="font-body text-sm md:text-base font-light text-text-dark/70 leading-relaxed">
@@ -50,7 +50,7 @@ export default function HomeServices() {
         {/* CTA */}
         <Link
           to="/diensten"
-          className="inline-block font-body text-xs uppercase tracking-[0.2em] text-text-dark border border-text-dark/30 px-8 py-4 hover:bg-text-dark hover:text-white transition-all duration-300"
+          className="inline-block font-body text-xs uppercase tracking-[0.2em] text-[#F5F0E8] bg-hero-bg px-10 py-4 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300"
         >
           Bekijk alle pakketten
         </Link>

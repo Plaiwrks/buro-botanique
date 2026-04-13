@@ -20,7 +20,7 @@ export function Component() {
         </p>
         <Link
           to="/"
-          className="inline-block font-body text-xs uppercase tracking-[0.2em] text-white border border-white/40 px-8 py-4 hover:bg-white hover:text-hero-bg transition-all duration-300"
+          className="inline-block font-body text-xs uppercase tracking-[0.2em] text-hero-bg bg-[#F5F0E8] px-10 py-4 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300"
         >
           Terug naar home
         </Link>

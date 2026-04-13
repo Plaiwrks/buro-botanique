@@ -45,7 +45,7 @@ export default function HomeFaq() {
   }
 
   return (
-    <section className="bg-white px-6 md:px-10 py-20 md:py-32">
+    <section className="bg-white px-6 md:px-10 py-12 md:py-16">
       <Head>
         <script
           type="application/ld+json"
@@ -57,7 +57,7 @@ export default function HomeFaq() {
         <span className="font-script text-2xl md:text-4xl text-text-dark/40 block mb-[-0.2em]">
           Veelgestelde vragen
         </span>
-        <h2 className="font-display text-[10vw] md:text-[4vw] font-bold uppercase leading-[0.9] text-text-dark tracking-tight mb-14 md:mb-20">
+        <h2 className="font-display text-[10vw] md:text-[4vw] font-bold uppercase leading-[0.9] text-text-dark tracking-tight mb-8 md:mb-10">
           FAQ
         </h2>
 
@@ -66,7 +66,7 @@ export default function HomeFaq() {
             <div key={i}>
               <button
                 onClick={() => toggle(i)}
-                className="w-full flex items-center justify-between py-6 text-left"
+                className="w-full flex items-center justify-between py-4 text-left"
                 aria-expanded={openIndex === i}
               >
                 <span className="font-display text-lg md:text-xl font-bold text-text-dark pr-8">
@@ -78,7 +78,7 @@ export default function HomeFaq() {
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === i ? 'max-h-60 pb-6' : 'max-h-0'
+                  openIndex === i ? 'max-h-60 pb-4' : 'max-h-0'
                 }`}
               >
                 <p className="font-body text-sm md:text-base font-light text-text-dark/70 leading-relaxed">
