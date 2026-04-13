@@ -9,12 +9,12 @@ export default function MarqueeTicker() {
   ))
 
   return (
-    <div className="bg-ticker-bg overflow-hidden py-4 relative z-[5]">
+    <div className="bg-[#F08B1F] overflow-hidden py-4 relative z-[5]">
       <div className="flex animate-marquee">
-        <div className="flex shrink-0 items-center font-body text-sm uppercase tracking-[0.15em] text-text-dark">
+        <div className="flex shrink-0 items-center font-body text-sm uppercase tracking-[0.15em] text-white">
           {items}
         </div>
-        <div className="flex shrink-0 items-center font-body text-sm uppercase tracking-[0.15em] text-text-dark" aria-hidden="true">
+        <div className="flex shrink-0 items-center font-body text-sm uppercase tracking-[0.15em] text-white" aria-hidden="true">
           {items}
         </div>
       </div>

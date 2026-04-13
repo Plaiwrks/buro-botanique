@@ -4,14 +4,14 @@ export default function HomePortfolio() {
   return (
     <section className="bg-section-green py-20 md:py-32 relative overflow-hidden">
       {/* Hortensia video achtergrond — mix-blend-mode: multiply */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute top-0 right-0 w-1/2 h-full">
         <video
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          className="h-full w-auto object-contain mix-blend-multiply"
+          className="w-full h-full object-cover mix-blend-multiply"
         >
           <source src="/images/hortensia.mp4" type="video/mp4" />
         </video>
