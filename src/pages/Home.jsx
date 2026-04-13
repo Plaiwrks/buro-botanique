@@ -3,6 +3,7 @@ import HomeHero from '../components/sections/HomeHero'
 import HomeServices from '../components/sections/HomeServices'
 import HomePortfolio from '../components/sections/HomePortfolio'
 import HomeFaq from '../components/sections/HomeFaq'
+import MarqueeTicker from '../components/ui/MarqueeTicker'
 
 export function Component() {
   return (
@@ -22,6 +23,7 @@ export function Component() {
       <HomeHero />
       <HomeServices />
       <HomePortfolio />
+      <MarqueeTicker />
       <HomeFaq />
     </>
   )

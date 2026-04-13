@@ -33,31 +33,21 @@ export default function HomeHero() {
 
   return (
     <section className="relative min-h-screen bg-hero-bg overflow-hidden flex flex-col">
-      {/* Hero video — achter de tekst */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[60%] h-[70%] overflow-hidden rounded-sm relative">
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className={`w-full h-full object-cover transition-opacity duration-[2000ms] ${
-              loaded ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <source src="/images/hero/hero-video.mp4" type="video/mp4" />
-          </video>
-
-          {/* Gradient overlay onderaan — transparant naar achtergrondkleur */}
-          <div
-            className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none"
-            style={{
-              background: 'linear-gradient(to bottom, transparent, #434F33)',
-            }}
-          />
-        </div>
+      {/* Hero video — volledige breedte achter alle tekst */}
+      <div className="absolute inset-0">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className={`w-full h-full object-cover transition-opacity duration-[2000ms] ${
+            loaded ? 'opacity-40' : 'opacity-0'
+          }`}
+        >
+          <source src="/images/hero/hero-v4.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* Centered title block */}

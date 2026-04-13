@@ -5,6 +5,7 @@ const PACKAGES = [
   {
     name: 'Groen',
     subtitle: 'De Upgrade',
+    price: 'Vanaf €375,-',
     description:
       'Heb je al een fijne basis, maar mist er nog iets? Met het Groen-pakket focussen we ons op één specifiek onderdeel van je tuin.',
     focus: 'Eén specifiek onderdeel (bijv. verlichting óf beplanting)',
@@ -13,6 +14,7 @@ const PACKAGES = [
   {
     name: 'Groener',
     subtitle: 'Het Ontwerp',
+    price: 'Vanaf €425,-',
     description: 'Ben je toe aan een compleet nieuwe indeling?',
     focus: 'Een compleet tuinontwerp op maat',
     idealFor: 'Nieuwbouw of renovatie',
@@ -20,6 +22,7 @@ const PACKAGES = [
   {
     name: 'Groenst',
     subtitle: 'Het Totaalplan',
+    price: 'Vanaf €575,-',
     description: 'Wil je het maximale uit je buitenruimte halen?',
     focus:
       'Full-service ontwerp inclusief beplantingsplan en verlichtingsplan',
@@ -64,7 +67,7 @@ export function Component() {
       <section className="bg-section-pink px-6 md:px-10 py-20 md:py-32">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-            {PACKAGES.map(({ name, subtitle, description, focus, idealFor }) => (
+            {PACKAGES.map(({ name, subtitle, price, description, focus, idealFor }) => (
               <div
                 key={name}
                 className="border border-text-dark/10 p-8 md:p-10 flex flex-col"
@@ -73,9 +76,12 @@ export function Component() {
                 <span className="font-script text-xl text-text-dark/50 block mb-[-0.1em]">
                   {subtitle}
                 </span>
-                <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-text-dark mb-6">
+                <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-text-dark mb-2">
                   {name}
                 </h2>
+                <p className="font-body text-sm font-medium text-text-dark/60 mb-6">
+                  {price}
+                </p>
 
                 {/* Description */}
                 <p className="font-body text-sm md:text-base font-light text-text-dark/70 leading-relaxed mb-8">
