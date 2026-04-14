@@ -20,6 +20,7 @@ export function Component() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.burobotanique.nl/" />
         <meta property="og:locale" content="nl_NL" />
+        <meta property="og:image" content="https://www.burobotanique.nl/images/logo.png" />
       </Head>
       <HomeHero />
       <HomeServices />

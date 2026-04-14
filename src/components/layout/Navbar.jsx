@@ -36,14 +36,23 @@ export default function Navbar() {
   const barColor = overLight ? 'bg-text-dark' : 'bg-white'
 
   return (
-    <nav
+    <header role="banner"><nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled ? 'backdrop-blur-md' : ''
       }`}
     >
-      <div className="flex items-center justify-between px-6 md:px-10 py-5">
+      <div className="flex items-center justify-between px-6 md:px-10 py-4">
+        {/* Logo — home link */}
+        <Link to="/" className="shrink-0 hover:opacity-80 transition-opacity" aria-label="Home">
+          <img
+            src="/images/logo.png"
+            alt="Buro Botanique"
+            className="h-8 md:h-10 w-auto"
+          />
+        </Link>
+
         {/* Desktop nav links */}
-        <ul className="hidden md:flex gap-8">
+        <ul className="hidden md:flex gap-8 items-center">
           {NAV_ITEMS.map(({ label, path }) => (
             <li key={path}>
               <Link
@@ -101,6 +110,6 @@ export default function Navbar() {
           ))}
         </ul>
       </div>
-    </nav>
+    </nav></header>
   )
 }

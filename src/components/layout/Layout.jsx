@@ -58,21 +58,36 @@ const STRUCTURED_DATA = {
   },
 }
 
-function usePageView() {
+function useAnalytics() {
   const location = useLocation()
+  const gaId = import.meta.env.VITE_GA_MEASUREMENT_ID
 
+  // Load gtag.js once
   useEffect(() => {
-    if (window.gtag && window.__GA_ID__) {
+    if (!gaId) return
+    const script = document.createElement('script')
+    script.async = true
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`
+    document.head.appendChild(script)
+    window.dataLayer = window.dataLayer || []
+    window.gtag = function () { window.dataLayer.push(arguments) }
+    window.gtag('js', new Date())
+    window.gtag('config', gaId, { send_page_view: false })
+  }, [gaId])
+
+  // Track page views on route change
+  useEffect(() => {
+    if (window.gtag && gaId) {
       window.gtag('event', 'page_view', {
         page_path: location.pathname,
         page_title: document.title,
       })
     }
-  }, [location.pathname])
+  }, [location.pathname, gaId])
 }
 
 export default function Layout() {
-  usePageView()
+  useAnalytics()
 
   return (
     <>

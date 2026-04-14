@@ -13,6 +13,8 @@ export default {
         'ticker-bg': '#F7D5D5',
         'text-dark': '#1E1208',
         'text-light': '#FFFFFF',
+        'review-bg': '#EDD0B5',
+        'logo-orange': '#F08B1F',
       },
       animation: {
         marquee: 'marquee 20s linear infinite',

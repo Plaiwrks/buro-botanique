@@ -78,9 +78,12 @@ export function Component() {
                 <p className="font-body text-[10px] uppercase tracking-[0.2em] text-text-dark/40 mb-1">
                   Telefoon
                 </p>
-                <p className="font-body text-base text-text-dark/50 italic">
-                  Nog in te vullen
-                </p>
+                <a
+                  href="tel:+31611132118"
+                  className="font-body text-base text-text-dark hover:text-text-dark/60 transition-colors"
+                >
+                  +31 6 11132118
+                </a>
               </div>
             </div>
           </div>
