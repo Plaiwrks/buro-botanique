@@ -5,7 +5,8 @@ export function Component() {
   return (
     <>
       <Head>
-        <title>Pagina niet gevonden — Buro Botanique</title>
+        <title>Pagina niet gevonden | Buro Botanique</title>
+        <meta name="robots" content="noindex, follow" />
       </Head>
 
       <section className="min-h-screen bg-hero-bg flex flex-col items-center justify-center px-6 text-center">

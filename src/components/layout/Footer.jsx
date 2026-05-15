@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Logo / naam */}
           <div className="mb-12">
             <span className="font-script text-2xl md:text-3xl text-white">Buro</span>
-            <h2 className="font-display text-2xl md:text-5xl font-bold uppercase text-white -mt-1 flex items-end">
+            <div className="font-display text-2xl md:text-5xl font-bold uppercase text-white -mt-1 flex items-end" aria-label="Buro Botanique">
               <span>Botan</span>
               <img
                 src="/images/logo.png"
@@ -23,7 +23,7 @@ export default function Footer() {
                 style={{ height: '1.1em', width: 'auto', marginBottom: '-0.05em', marginLeft: '-0.02em', marginRight: '-0.02em' }}
               />
               <span>que</span>
-            </h2>
+            </div>
           </div>
 
           <div className="flex flex-col md:flex-row md:justify-between gap-10 md:gap-20">
@@ -58,10 +58,10 @@ export default function Footer() {
                   E-mail
                 </p>
                 <a
-                  href="mailto:claire.wesselings@gmail.com"
+                  href="mailto:info@burobotanique.nl"
                   className="font-body text-sm text-white hover:text-white/70 transition-colors"
                 >
-                  claire.wesselings@gmail.com
+                  info@burobotanique.nl
                 </a>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function Footer() {
 
                 {/* LinkedIn */}
                 <a
-                  href="https://linkedin.com/in/clairewesselings"
+                  href="https://www.linkedin.com/in/claire-wesselings-13b965298/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"
@@ -100,7 +100,7 @@ export default function Footer() {
 
                 {/* Email */}
                 <a
-                  href="mailto:claire.wesselings@gmail.com"
+                  href="mailto:info@burobotanique.nl"
                   className="text-white/70 hover:text-white transition-colors"
                   aria-label="E-mail"
                 >

@@ -9,17 +9,55 @@ export function Component() {
   return (
     <>
       <Head>
-        <title>Portfolio — Buro Botanique</title>
+        <title>Portfolio | Tuinprojecten in Amsterdam | Buro Botanique</title>
         <meta
           name="description"
-          content="Bekijk onze tuinprojecten en laat je inspireren."
+          content="Bekijk onze tuinprojecten en laat je inspireren. Stadstuinen, dakterrassen en villatuinen ontworpen door Buro Botanique in Amsterdam."
         />
-        <meta property="og:title" content="Portfolio — Buro Botanique" />
-        <meta property="og:description" content="Bekijk onze tuinprojecten en laat je inspireren." />
+        <link rel="canonical" href="https://www.burobotanique.nl/portfolio" />
+
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Buro Botanique" />
+        <meta property="og:title" content="Portfolio | Tuinprojecten in Amsterdam | Buro Botanique" />
+        <meta property="og:description" content="Bekijk onze tuinprojecten en laat je inspireren door echte tuinen die wij ontworpen hebben." />
         <meta property="og:url" content="https://www.burobotanique.nl/portfolio" />
         <meta property="og:locale" content="nl_NL" />
+        <meta property="og:image" content="https://www.burobotanique.nl/images/portfolio/project-01.jpeg" />
+
+        {/* Twitter cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Portfolio | Tuinprojecten in Amsterdam | Buro Botanique" />
+        <meta name="twitter:description" content="Bekijk onze tuinprojecten en laat je inspireren." />
+        <meta name="twitter:image" content="https://www.burobotanique.nl/images/portfolio/project-01.jpeg" />
+
       </Head>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.burobotanique.nl/' },
+                  { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://www.burobotanique.nl/portfolio' },
+                ],
+              },
+              {
+                '@type': 'CollectionPage',
+                name: 'Portfolio Buro Botanique',
+                description: 'Tuinprojecten ontworpen door Buro Botanique.',
+                url: 'https://www.burobotanique.nl/portfolio',
+                isPartOf: { '@id': 'https://www.burobotanique.nl/#website' },
+                about: { '@id': 'https://www.burobotanique.nl/#organization' },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section className="bg-hero-bg pt-32 md:pt-44 pb-20 md:pb-32 px-6 md:px-10">

@@ -1,4 +1,22 @@
 User-agent: *
 Allow: /
 
+# Don't crawl build artifacts
+Disallow: /assets/
+Disallow: /static-loader-data/
+Disallow: /.vite/
+
+# AI crawlers — allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://www.burobotanique.nl/sitemap.xml

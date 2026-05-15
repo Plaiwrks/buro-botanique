@@ -5,12 +5,12 @@ const FAQS = [
   {
     question: 'Wat doet een tuinontwerper?',
     answer:
-      'Een tuinontwerper maakt een ontwerp op maat voor jouw buitenruimte. Bij Buro Botanique kijken we naar je architectuur, levensstijl en wensen en vertalen we dat naar een compleet tuinontwerp — inclusief beplanting en eventueel verlichting.',
+      'Een tuinontwerper maakt een ontwerp op maat voor jouw buitenruimte. Bij Buro Botanique kijken we naar je architectuur, levensstijl en wensen en vertalen we dat naar een compleet tuinontwerp, inclusief beplanting en eventueel verlichting.',
   },
   {
     question: 'Wat kost tuinontwerp op maat?',
     answer:
-      'De kosten hangen af van het pakket dat je kiest. Met het Groen-pakket focus je op één onderdeel van je tuin, met Groener krijg je een compleet ontwerp, en met Groenst een totaalplan inclusief beplantings- en lichtplan. Neem contact op voor een vrijblijvend gesprek van 15 minuten.',
+      'De kosten hangen af van het pakket dat je kiest. Met het Groen pakket focus je op één onderdeel van je tuin, met Groener krijg je een compleet ontwerp, en met Groenst een totaalplan inclusief beplantingsplan en lichtplan. Neem contact op voor een vrijblijvend gesprek van 15 minuten.',
   },
   {
     question: 'Hoe lang duurt een tuinontwerp traject?',
@@ -20,7 +20,7 @@ const FAQS = [
   {
     question: 'Werk je ook met kleine tuinen?',
     answer:
-      'Ja, elke tuin en elke klant is uniek — dat is altijd het vertrekpunt. Of je nu een stadstuin, dakterras of grotere buitenruimte hebt, we maken een ontwerp dat past bij jouw ruimte en wensen.',
+      'Ja, elke tuin en elke klant is uniek. Dat is altijd het vertrekpunt. Of je nu een stadstuin, dakterras of grotere buitenruimte hebt, we maken een ontwerp dat past bij jouw ruimte en wensen.',
   },
 ]
 
