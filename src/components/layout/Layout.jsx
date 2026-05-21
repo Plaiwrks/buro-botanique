@@ -3,8 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
-const STRUCTURED_DATA = {
-  '@context': 'https://schema.org',
+const ORGANIZATION_DATA = {
   '@type': ['LocalBusiness', 'LandscapingBusiness', 'ProfessionalService'],
   '@id': 'https://www.burobotanique.nl/#organization',
   name: 'Buro Botanique',
@@ -138,7 +137,6 @@ const STRUCTURED_DATA = {
 }
 
 const WEBSITE_DATA = {
-  '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': 'https://www.burobotanique.nl/#website',
   url: 'https://www.burobotanique.nl/',
@@ -146,6 +144,11 @@ const WEBSITE_DATA = {
   description: 'Tuinontwerp op maat in Amsterdam',
   publisher: { '@id': 'https://www.burobotanique.nl/#organization' },
   inLanguage: 'nl-NL',
+}
+
+const COMBINED_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@graph': [ORGANIZATION_DATA, WEBSITE_DATA],
 }
 
 function useAnalytics() {
@@ -183,15 +186,7 @@ export default function Layout() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@graph': [
-              { ...STRUCTURED_DATA, '@context': undefined },
-              { ...WEBSITE_DATA, '@context': undefined },
-            ].map((o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined))),
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(COMBINED_SCHEMA) }}
       />
       <Navbar />
       <main>

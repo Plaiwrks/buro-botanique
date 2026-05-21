@@ -3,21 +3,41 @@ import { useState } from 'react'
 
 export function Component() {
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const formspreeId = import.meta.env.VITE_FORMSPREE_ID
 
   function handleSubmit(e) {
     e.preventDefault()
     const form = e.target
 
+    // Fallback: als geen Formspree ID is ingesteld, open mailto met form data
+    if (!formspreeId) {
+      const data = new FormData(form)
+      const subject = encodeURIComponent('Aanvraag via website van ' + (data.get('name') || ''))
+      const body = encodeURIComponent(
+        `Naam: ${data.get('name') || ''}\n` +
+        `E-mail: ${data.get('email') || ''}\n` +
+        `Telefoon: ${data.get('phone') || ''}\n\n` +
+        `Bericht:\n${data.get('message') || ''}`
+      )
+      window.location.href = `mailto:info@burobotanique.nl?subject=${subject}&body=${body}`
+      return
+    }
+
     fetch(form.action, {
       method: 'POST',
       body: new FormData(form),
       headers: { Accept: 'application/json' },
-    }).then((res) => {
-      if (res.ok) {
-        setSubmitted(true)
-        form.reset()
-      }
     })
+      .then((res) => {
+        if (res.ok) {
+          setSubmitted(true)
+          form.reset()
+        } else {
+          setError(true)
+        }
+      })
+      .catch(() => setError(true))
   }
 
   return (
@@ -138,11 +158,20 @@ export function Component() {
               </div>
             ) : (
               <form
-                action={`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID}`}
+                action={formspreeId ? `https://formspree.io/f/${formspreeId}` : 'mailto:info@burobotanique.nl'}
                 method="POST"
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >
+                {error && (
+                  <div className="border border-red-500/30 bg-red-50/50 p-4 text-sm font-body text-text-dark">
+                    Er ging iets mis bij het versturen. Mail ons direct via{' '}
+                    <a href="mailto:info@burobotanique.nl" className="underline">
+                      info@burobotanique.nl
+                    </a>
+                    .
+                  </div>
+                )}
                 <div>
                   <label
                     htmlFor="name"
@@ -206,12 +235,41 @@ export function Component() {
                   />
                 </div>
 
+                {/* Honeypot tegen spam — onzichtbaar voor mensen */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  tabIndex="-1"
+                  autoComplete="off"
+                  className="absolute -left-[9999px] opacity-0 pointer-events-none"
+                  aria-hidden="true"
+                />
+
                 <button
                   type="submit"
                   className="inline-block font-body text-xs uppercase tracking-[0.2em] text-[#F5F0E8] bg-hero-bg px-10 py-4 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 mt-4"
                 >
                   Verstuur
                 </button>
+
+                {error && (
+                  <div className="mt-4 p-4 border border-red-400/30 bg-red-50/50 rounded-sm">
+                    <p className="font-body text-sm text-text-dark/80">
+                      Er ging iets mis. Stuur je bericht direct naar{' '}
+                      <a
+                        href="mailto:info@burobotanique.nl"
+                        className="underline font-medium"
+                      >
+                        info@burobotanique.nl
+                      </a>
+                      {' '}of bel ons op{' '}
+                      <a href="tel:+31611132118" className="underline font-medium">
+                        +31 6 11132118
+                      </a>
+                      .
+                    </p>
+                  </div>
+                )}
               </form>
             )}
           </div>
